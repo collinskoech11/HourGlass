@@ -28,5 +28,6 @@ public class pattern{
             x += 2;
             System.out.println();
         }
+        sc.close();
     }
 }
