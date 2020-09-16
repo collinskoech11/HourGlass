@@ -1,28 +1,32 @@
 import java.util.Scanner;
 public class pattern{
     public static void main(String[]args){
-        int i,j,k,n;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of rows to be printed:");
-        n = sc.nextInt();
-        for(i=0;i<=n-1; i++){
-            for(j=0; j<i;j++){
-                System.out.println(" ");
+        System.out.println("Enter the value of n");
+        int N = sc.nextInt();
+        int x = N*2-1;
+
+        for (int i = 0; i < N; i++) {
+            for (int j = i; j > 0; j--) {
+                System.out.print(" ");
             }
-            for(k=i;k<=n-1;k++){
-                System.out.println("*"+" ");
+            for (int k = 0; k < x; k++) {
+                System.out.print("*");
             }
-            System.out.println("");
+            x-=2;
+            System.out.println();
         }
-        for(i=n-1;i>=0;i--){
-            for(j=0;j<i;j++){
-                System.out.println(" ");
+
+        x = 1;
+        for (int i = 0; i < N; i++) {
+            for (int j = i; j < N-1; j++) {
+                System.out.print(" ");
             }
-            for(k=i;k<=n-1;k++){
-                System.out.println("*"+" ");
+            for (int k = 0; k < x; k++) {
+                System.out.print("*");
             }
-            System.out.println("");
+            x += 2;
+            System.out.println();
         }
-        sc.close();
     }
 }
