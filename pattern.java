@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class pattern{
     public static void main(String[]args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the value of n");
+        System.out.print("Enter the height of the Hour glass : ");
         int N = sc.nextInt();
         int x = N*2-1;
 
